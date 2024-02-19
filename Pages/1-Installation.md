@@ -23,4 +23,4 @@ Please visit https://energymodels.eng.ed.ac.uk/oceanedge/link_matlab to find you
 This toolbox is maintained by the HAPiWEC Team - updates will be sent to you via email as soon as they are released. You can double click this new file to install the latest version.
 
 
-[Next page (Build a model)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Build-a-model.md)
+[Next page (Build a model)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md)
