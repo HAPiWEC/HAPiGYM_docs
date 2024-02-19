@@ -9,7 +9,7 @@ If you have questions relating to this suite of software tools, please email us 
 
 ## Getting started
 
-1. [Installation](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/1-Installation.md)
-2. [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Build-a-model.md)
-3. [Running your model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Running-your-model.md)
-4. [Making your own controller](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Making-your-own-controller.md)
+1. [Installation](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Installation.md)
+2. [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Build-a-model.md)
+3. [Running your model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Running-your-model.md)
+4. [Making your own controller](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Making-your-own-controller.md)
