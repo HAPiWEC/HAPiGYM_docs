@@ -9,4 +9,5 @@ The different Simulink components of your new model are found in the root of you
 The next stage of the HAPiGYM process is to start tailoring this `Initialisation.m` script for your specific needs, and to start developing your own controller.
 
 [Previous page (Build a model)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md)
+
 [Next page (Making your own controller)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/4-Making-your-own-controller.md)
