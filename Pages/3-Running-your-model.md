@@ -2,7 +2,7 @@
 
 # Getting started - Running your model
 
-The first step anytime you open Matlab is to open the `Initialisation.m` file and run/step-through the code. Once you've run this you should find that you have populated the workspace with all the variables need for the Simulink model(s). If you've come straight here from the [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md) stage (i.e. you've just run `Hapigym.build_model()`), the model should run straight out-of-the-box, with default applied of course!
+The first step anytime you open Matlab is to open the `Initialisation.m` file and run/step-through the code. Once you've run this you should find that you have populated the workspace with all the variables need for the Simulink model(s). If you've come straight here from the [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md) stage (i.e. you've just run `Hapigym.build_model()`), the model should run straight out-of-the-box, with defaults applied!
 
 The different Simulink components of your new model are found in the root of your project path (specifically the `Outline.slx` file), and within the `Simulation_components` folder.
 
