@@ -7,28 +7,9 @@ The software tools have been developed in Matlab and Simulink. For the remote-ac
 If you have questions relating to this suite of software tools, please email us (hapiwec@ed.ac.uk) with the subject "HAPiGYM Software Support", or alternatively use the [Contact Us](https://www.hapiwec.net/get-in-touch/) form on our website.
 
 
-[toc]
+## Getting started
 
----
-
-# Getting started
-
-## 1. Toolbox installation
-
-The software is set up as a Matlab Toolbox and can be installed using the `HAPiGYM.mltbx` file provided to you (your team) at the start of the HAPiGYM process.
-
-**To install:** double click the `HAPiGYM.mltbx` file anywhere inside your operating system's file explorer, or from within Matlab itself.
-
-## 2. Access our cloud-based models
-
-Please visit https://energymodels.eng.ed.ac.uk/accounts/register/ to register for our cloud based model viewer. You'll need the access token provided to you via your welcome email. Once you've registered you can go directly to the step 3. 
-
-## 3. Link your Matlab to our cloud
-
-Please visit https://energymodels.eng.ed.ac.uk/oceanedge/link_matlab to find your API keys. Copy the two lines of code and paste them into your Matlab command line (this will also work on Matlab Online). You can now run your first piece of code!
-
-> **Note:** Running these two lines of code should be a 'one-time' process. Matlab may, however, have to reboot in order to save these environment variables for the next time you `clear` your session. Windows users may also find they need to reboot their OS to have the environment variables persist. In any case, you can re-run the two `setenv(...)` lines as required to let you access our cloud models.
-
-## Updates
-
-This toolbox is maintained by the HAPiWEC Team - updates will be sent to you via email as soon as they are released. You can double click this new file to install the latest version.
+1. [Installation](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/1-Installation.md)
+2. [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Build-a-model.md)
+3. [Running your model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Running-your-model.md)
+4. [Making your own controller](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/pages/Making-your-own-controller.md)
