@@ -4,7 +4,7 @@
 
 ## Toolbox installation
 
-The software is set up as a Matlab Toolbox and can be installed using the `HAPiGYM.mltbx` file provided to you (your team) at the start of the HAPiGYM process. The latest version of the software can be found [here](https://energymodels.eng.ed.ac.uk/oceanedge/toolbox_versions/).
+The software is set up as a Matlab Toolbox and can be installed using the `HAPiGYM.mltbx` file provided to you (your team) at the start of the HAPiGYM process. The latest version of the software can be found [here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions).
 
 **To install:** double click the `HAPiGYM.mltbx` file anywhere inside your operating system's file explorer, or from within Matlab itself.
 
