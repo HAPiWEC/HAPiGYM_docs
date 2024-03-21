@@ -3,7 +3,7 @@
 # Getting started - Build a model
 
 
-Now that you've [installed](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Installation.md) the HAPiGYM Toolbox and linked to to the OceanEdge Cloud, you can build a model.
+Now that you've [installed](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Installation.md) the HAPiGYM Toolbox, you can build the project folder for your model.
 
 Create an empty directory to carry out your work. Open Matlab and move to this path, then run the following 'one-time' setup command in the command line:
 
