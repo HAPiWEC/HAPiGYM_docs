@@ -26,4 +26,4 @@ You'll still have well-defined areas that you can build your own code and Simuli
  **Simulation:** After `Initialisation.m` has run, the simulation is built. If additional toolboxes are required, these will be specified in the `Diagnostic Viewer` at the bottom of the Simulink pane. If all is well with the build, the simulation is then run. This is faster than real time, so you might miss it! You can make sure it has actually run using `Data Inspector`, which is available on the Simulation tab in Simulink.       
 
 
-[Next page (Build a model)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md)
+[Next page (Using The Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2.Using-The-Sandbox.md)
