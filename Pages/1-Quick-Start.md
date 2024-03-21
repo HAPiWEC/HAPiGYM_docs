@@ -5,14 +5,14 @@
 
 ## Quick Start Guide
 
-**Install the HAPiGYM Toolbox:** Download the most recent version of the toolbox [here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons.
+**1. Install the HAPiGYM Toolbox:** Download the most recent version of the toolbox [here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons.
 
-**Build a project:** Create an empty directory to carry out your work. Open Matlab and move to this path, then run the following 'one-time' setup command in the command line:
+**2. Build a project:** Create an empty directory to carry out your work. Open Matlab and move to this path, then run the following 'one-time' setup command in the command line:
 
 ```matlab
 Hapigym.build_model()
 ```
-**Check the model:** Open `Outline.slx` and in the Simulation tab of Simuink, select `Run`.
+**3. Check the model:** Open `Outline.slx` and in the Simulation tab of Simuink, select `Run`.
 
 ## Explanation
 
