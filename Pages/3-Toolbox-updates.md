@@ -2,7 +2,7 @@
 
 # Updating the toolbox
 
-We'll email participants whenever there is a toolbox update available. It's up to you when you do the update - your current toolbox will still work, it just won't have any new features. If the update is terrible, you can always reinstall an [older version] (https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions/Earlier%20versions).  
+We'll email participants whenever there is a toolbox update available. It's up to you when you do the update - your current toolbox will still work, it just won't have any new features. If the update is terrible, you can always reinstall an [older version](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions/Earlier%20versions).  
 
  **1. Install the latest toolbox version:** This is a repeat of the first quick start step - download and install the [latest toolbox](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). 
 
