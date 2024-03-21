@@ -2,6 +2,8 @@
 
 # Updating the toolbox
 
+We'll email participants whenever there is a toolbox update available. 
+
  **1. Install the latest toolbox version:** This is a repeat of the first quick start step - download and install the [latest toolbox](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). 
 
  **2.a) Upgrade Option:** Navigate to the project folder where you've been working and in the Matlab command line type: ```matlab Hapigym.upgrade() ``` 
