@@ -17,9 +17,12 @@ Hapigym.build_model()
 ## Explanation
 
 **Toolbox:** When you install the toolbox, templates and object-oreintated tools are downloaded into a toolbox folder. It's hidden away on your system, but on your Matlab path. 
+
 **Build:** When you use the method `build_model` an instance of the project strucutre is copied over from the toolbox folder to the folder you are in when you do the build. You'll now find a folder structure in the present directory. **You should keep the filenames and folder structure unchanged going forward**; this is because the main simulation references components in these folders.
 You'll still have well-defined areas that you can build your own code and Simulink models
+
  **Initialisation:** When you run the `Outline.slx` simulation, the first thing that happens is that the `Initialisation.m` file is run. This is buried away in Simulink under `Modelling>Model Settings> Model Properties>Callbacks>PreloadFcn`. Simulink looks for this file in the current folder, so it is important that you are in the current folder when running the simulation. The Initialisation routine lets the user choose settings for that run. These are implemented by creating variables in the workspace which are referenced by the simulation. Some of these workspace variables are objects which are created by calling methods that are defined in the toolbox. `Initialisation.m` is populated with defaults so you can use it straight out-of-the-box. 
+ 
  **Simulation:** After `Initialisation.m` has run, the simulation is built. If additional toolboxes are required, these will be specified in the `Diagnostic Viewer` at the bottom of the Simulink pane. If all is well with the build, the simulation is then run. This is faster than real time, so you might miss it! You can make sure it has actually run using `Data Inspector`, which is available on the Simulation tab in Simulink.       
 
 
