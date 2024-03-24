@@ -10,6 +10,6 @@ If you have questions relating to this suite of software tools, please email us 
 ## Getting started
 
 1. [Quick Start](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Quick-Start.md)
-2. [Build a model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2-Build-a-model.md)
-3. [Running your model](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/3-Running-your-model.md)
+2. [Using the Sandbox](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2.Using-The-Sandbox.md)
+3. [Toolbox Updates](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/3-Toolbox-updates.md)
 4. [Making your own controller](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/4-Making-your-own-controller.md)
