@@ -7,7 +7,7 @@
 
 
 <p style="display:inline-block;">
-  <img align="left" src="https://github.com/HAPiWEC/HAPiGYM_docs/assets/39997400/877acd49-b004-4072-b542-2d87089664c6" width="150" title="hover text">
+  <img align="left" src="https://github.com/HAPiWEC/HAPiGYM_docs/assets/39997400/877acd49-b004-4072-b542-2d87089664c6" width="220" title="hover text">
  
 **1. Install the HAPiGYM Toolbox:** Download the most recent version of the toolbox [here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons.
 
