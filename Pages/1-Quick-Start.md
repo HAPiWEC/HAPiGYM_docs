@@ -5,6 +5,10 @@
 
 ## Quick Start Guide
 
+
+<p style="display:inline-block;">
+  <img align="left" src="https://github.com/HAPiWEC/HAPiGYM_docs/assets/39997400/877acd49-b004-4072-b542-2d87089664c6" width="150" title="hover text">
+ 
 **1. Install the HAPiGYM Toolbox:** Download the most recent version of the toolbox [here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons.
 
 **2. Build a project:** Create an empty directory to carry out your work. Open Matlab and move to this path, then run the following 'one-time' setup command in the command line:
@@ -13,6 +17,8 @@
 Hapigym.build_model()
 ```
 **3. Check the model:** Open `Outline.slx` and in the Simulation tab of Simuink, select `Run`.
+
+</p>
 
 ## Explanation
 
