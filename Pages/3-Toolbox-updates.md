@@ -2,15 +2,38 @@
 
 # Updating the toolbox
 
-We'll email participants whenever there is a toolbox update available. It's up to you when you do the update - your current toolbox will still work, it just won't have any new features. If the update is terrible, you can always reinstall an [older version](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions/Earlier%20versions).  
+### How to upgrade to the latest toolbox
+To upgrade to the latest toolbox (which we always recommend), do the following:
+1. download the `.mltbx` file from [GitHub](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions) or [OceanEdGE](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions)
+2. double-click the file directly from your browser's download list, from you downloads folder, or from within Matlab
 
- **1. Install the latest toolbox version:** This is a repeat of the first quick start step - download and install the [latest toolbox](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). 
+**As of HAPiGYM v0.3.3, this is all you need to do!** It is beneficial to understand more about the upgrade process, especially if you have issues working with new versions. Read on to find out more. If you have issues with new upgrades, [older toolbox version can be found here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions/Earlier%20versions) (for versions earlier than v0.3.3, you will have to type `Hapigym.upgrade()` to synchronise your project with the toolbox version you have chosen).
 
- **2.a) Upgrade Option:** Navigate to the project folder where you've been working and in the Matlab command line type: ```matlab Hapigym.upgrade() ``` 
- 
- **2.b) New Project Option:** There might be reasons to start from scratch. Just repeat the instructions in the [Quick Start guide](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Quick-Start.md).
- 
- **3. Check previous file versions:** When you upgrade, any changes that you have made are stored in a new folder called `Previous_versions`. The intension is to save people from Github. We'll monitor the effectiveness of this approach as we go along.
+### What happens when you double-click the `.mltbx` file?
+The classes and methods used throughout the HAPiGYM toolbox will all be updated as soon as you double click the `.mltbx` file. Your project(s), however, will still contain the template files that were used when each project was first built, or most recently upgraded. You can see when any of your project(s) were last upgraded by typing `load('meta.mat'); meta.builds`. 
+
+### The automatic upgrade process (happens when you next run your model)
+Upgrades to your projects happen automatically when you run an existing model (this new automated feature was added in v0.3.3; users previously had to type `Hapigym.upgrade()` to carry forward the latest files from the add-ons folder, to your local project).
+
+### Which files are overwritten* during automatic upgrading?
+The automated upgrade process will check most (but not all) of the files within your project and will compare them to the latest version. The `meta.mat` file contains a list of *upgradable files* which the upgrader uses to identify files to be overwritten* in your project. When an *upgradable file* is out of date, it will automatically be replaced with the latest version. 
+
+### Which files are *not* overwritten during automatic upgrading?
+Files which are not listed in `meta.upgradable_files` will remain untouched. This important feature exists to ensure that the user has full control over certain files to allow them to create their own bespoke models. Files that are ***not*** overwritten include:
+1. `Initialisation.m` - this file allows the user to set up their bespoke model, to select the hydro model, wave conditions, controller, PTO efficiency and various other model settings. 
+2. `MyControlPolicy.slx` - the user can adapt this file as a template to build their own Simulink controller, and can expand to further controller options by adding further files (the name of the file(s) won't matter - it will not be overwritting unless it is listed in `meta.upgradable_files`). 
+
+### How to recover files that you used previously
+✱ **NOTE –** Files are not actually overwritten – they are moved to specific locations within the project structure to allow user to see/reverse changes made by the upgrader. Following the initial build process, you may have noticed a number of (nested) folders named `Previous_versions` containing time/version-stamped copies of most files. During upgrades, new copies of the latest template files are also saved to these folders. You can choose to ignore these folders/files, however, they may come in handy when you upgrade the toolbox to later versions. 
+
+If you notice unexpected changes to any working files in this directory following upgrades, check the various `Previous_versions` folders for files with the appendix '_archived'. Files with this appendix are files which the user has changed since a previous build/upgrade, and have since been overwritten* by the upgrade process. You can copy renamed archived files back into the working tree for your project, however, be wary that you may be missing new important code/Simulink context.
+
+Matlab provides a 'right-click' option to compare two selected files, which can help clarify incremental changes.
+
+### How do I persist *my* changes in upgradable files?
+If you believe the changes that *you* have made to any upgradable files would benefit other users, please get in touch with the package maintainers (hapiwec@ed.ac.uk) about possible upgrades to the maintained package (master branch).
+
+If you are working on adaptations to certain upgradable files, you can force the upgrader to skip automatic replacement of specific files by removing lines from the `meta.upgradable_files` list within your project's `meta.mat` file. It is likely you will have issues in the future if such files are no longer maintained by us.
 
 
 [Previous page (Using the Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2.Using-The-Sandbox.md)
