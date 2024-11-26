@@ -2,10 +2,7 @@
 
 # Setting up for the first time
 
-[toc]
-
-
-## Quick Start Guide ^*tl;dr*^
+## Quick Start Guide <sup>*tl;dr*</sup>
 
 
 <p style="display:inline-block;">
