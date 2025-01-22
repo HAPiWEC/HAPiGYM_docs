@@ -9,7 +9,7 @@
   <img align="left" src="https://github.com/HAPiWEC/HAPiGYM_docs/assets/39997400/877acd49-b004-4072-b542-2d87089664c6" width="220" title="hover text">
 
 ### 1. Install the HAPiGYM Toolbox
-Download the most recent version of the toolbox [here (GitHub)](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). You can also find the latest toolbox [on our supporting web platform, OceanEdGE](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons. When you receive notifications about updates to the toolbox, just repeat the above process.
+Download the most recent version of the toolbox [here (GitHub)](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). The most recent version is for Matlab R2024b. If you have an earlier version of Matlab, try v in the Previous versions folder. You can also find the latest toolbox [on our supporting web platform, OceanEdGE](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). From anywhere inside your operating system's file explorer, or from within Matlab itself, double click the `HAPiGYM.mltbx` file. This will add the toolbox to your Matlab add-ons. When you receive notifications about updates to the toolbox, just repeat the above process.
 
 ### 2. Build a project
 Open Matlab and navigate to a suitable directory for carrying out your work. When you run the following 'one-time' setup command in the command line, Matlab will create a new top-level project directory using the name that you provide when prompted:
