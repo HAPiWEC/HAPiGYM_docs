@@ -23,7 +23,7 @@ You should now see a series of new subdirectories and Matlab/Simulink files, all
 Open `Sandbox.slx` and in the Simulation tab of Simuink, select `Run`.
 
 ### 4. Upgrade
-Download and double-click the latest toolbox file, available from [GitHub](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions) or [OceanEdGE](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). Your existing projects will automatically be upgraded to the latest version when you next run them. More details on upgrades can be found on the [Toolbox Updates page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/3-Toolbox-updates.md).
+Download and double-click the latest toolbox file, available from [GitHub](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions) or [OceanEdGE](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions). Your existing projects will automatically be upgraded to the latest version when you next run them. More details on upgrades can be found on the [Toolbox Updates page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md).
 
 </p>
 
@@ -46,7 +46,7 @@ The following Matlab classes are also provided within the toolbox: `PTO`, `Digit
 When you use the `build_model` method, selected parts of package (i.e. the files hidden away in the Matlab add-ons folder) are copied to the new project strucutre. **You should keep the filenames and folder structure unchanged going forward**; this is because the main simulation references components in these folders.
 You'll still have well-defined areas that you can build your own code and Simulink models.
 
-You will notice an additional file called `meta.mat` is generated during the build process, along with a number of (nested) folders named `Previous_versions` containing time/version-stamped copies of most files. These are created to support the **upgrade process**, which is described in the [Toolbox Updates page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/3-Toolbox-updates.md).
+You will notice an additional file called `meta.mat` is generated during the build process, along with a number of (nested) folders named `Previous_versions` containing time/version-stamped copies of most files. These are created to support the **upgrade process**, which is described in the [Toolbox Updates page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md).
 
 ### Initialisation
 When you run the `Sandbox.slx` simulation, the first thing that happens is that the `Initialisation.m` file is run. This is buried away in Simulink under `Modelling>Model Settings> Model Properties>Callbacks>PreloadFcn`. Simulink looks for this file in the current folder, so it is important that you are in the current folder when running the simulation. The Initialisation routine lets the user choose settings for that run. These are implemented by creating variables in the workspace which are referenced by the simulation. Some of these workspace variables are objects which are created by calling methods that are defined in the toolbox. `Initialisation.m` is populated with defaults so you can use it straight out-of-the-box. 
@@ -55,4 +55,4 @@ When you run the `Sandbox.slx` simulation, the first thing that happens is that 
 After `Initialisation.m` has run, the simulation is built. If additional toolboxes are required, these will be specified in the `Diagnostic Viewer` at the bottom of the Simulink pane. If all is well with the build, the simulation is then run. This is faster than real time, so you might miss it! You can make sure it has actually run using `Data Inspector`, which is available on the Simulation tab in Simulink.       
 
 
-[Next page (Using The Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/2.Using-The-Sandbox.md)
+[Next page (Using The Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-The-Sandbox.md)

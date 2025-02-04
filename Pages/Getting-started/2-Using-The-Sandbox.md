@@ -37,6 +37,6 @@ Variant.Control = 1
 
 
 
-[Previous page (Quick Start)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/1-Quick-Start.md)
+[Previous page (Quick Start)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/1-Quick-Start.md)
 
-[Next page (Toolbox Updates)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/3-Toolbox-updates.md)
+[Next page (Toolbox Updates)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md)
