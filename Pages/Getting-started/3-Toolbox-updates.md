@@ -37,6 +37,6 @@ If you believe the changes that *you* have made to any upgradable files would be
 If you are working on adaptations to certain upgradable files, you can force the upgrader to skip automatic replacement of specific files by removing lines from the `meta.upgradable_files` list within your project's `meta.mat` file. It is likely you will have issues in the future if such files are no longer maintained by us.
 
 
-[Previous page (Using the Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-The-Sandbox.md)
+[Previous page (Using the Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md)
 
 [Next page (Making your own controller)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/4-Making-your-own-controller.md)
