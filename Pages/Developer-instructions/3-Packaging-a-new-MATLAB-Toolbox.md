@@ -4,7 +4,9 @@
 
 ## ...
 
+[... documentation to follow]
 
-[Previous page (Overwrite source files using a prototype)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Overwrite-source-files-using-a-prototype.md)
+
+[Previous page (Overwrite source files using a prototype)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Update-SLXs-using-a-prototype.md)
 
 [Next page (Creating a new GitHub release)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/4-Creating-a-new-GitHub-release.md)

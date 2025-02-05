@@ -4,6 +4,8 @@
 
 ## ...
 
+[... documentation to follow]
+
 
 [Previous page (Creating a new GitHub release)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/4-Creating-a-new-GitHub-release.md)
 
