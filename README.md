@@ -17,8 +17,8 @@ If you have questions relating to this suite of software tools, please email us 
 
 ## Developer instructions
 
-1. [Making prototypes](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/1-Making-prototypes.md)
-2. [Overwrite source files using a prototype](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Overwrite-source-files-using-a-prototype.md)
+1. [Maintaining the MATLAB Toolbox](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/1-Maintaining-the-MATLAB-Toolbox.md)
+2. [Update SLXs using a prototype](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Update-SLXs-using-a-prototype.md)
 3. [Packaging a new MATLAB Toolbox](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/3-Packaging-a-new-MATLAB-Toolbox.md)
 4. [Creating a new GitHub release](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/4-Creating-a-new-GitHub-release.md)
 5. [Fault finding](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/5-Fault-finding.md)
