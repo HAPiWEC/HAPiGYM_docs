@@ -51,23 +51,28 @@ An important way to think about this difference is to consider the end-user's sy
 
 1. Open the relevant `.m` file from the root of your development folder (e.g. `Hapigym.m`, `PTO.m` etc.). This must be the folder that you cloned directly from GitHub, and should also contain the `.git` folder and `.gitignore` file.
 2. Make your new changes directly to this file.
-3. Make a decision on your version number. If you have made no changes to the code that changes the behaviour (e.g. changes/addition of code comments, changes to the names of internal variables etc.), you can consider keeping the same version as previous. Otherwise, you can increment:
+
+## Making changes to 'Hackable Model Files'
+
+The specific process for this is more involved than for changing 'Source Classdefs', this is covered in the next section.
+
+## Packaging changes to either 'Source Classdefs' or 'Hackable Model Files'
+
+1. Make a decision on your version number. If you have made no changes to the code that changes the behaviour (e.g. changes/addition of code comments, changes to the names of internal variables etc.), you can consider keeping the same version as previous. Otherwise, you can increment:
    - the third value ('Z') to the next number if the change is minor (e.g. a bug fix)
    - the second value ('Y') if you have reached a significant new version, and/or 
    - the first value ('X') if a major overhaul/landmark has been implemented. 
 
    Version 'v1.0.0' should be reserved for the first major release a post beta-testing/pre-release. See https://semver.org/ for more details on 'Semantic Versioning'.
-4. Generate a new Toolbox file using the following command (swapping X,Y,Z for your version numbers):
+2. Generate a new Toolbox file using the following command (swapping X,Y,Z for your version numbers):
    ```
    Hapigym.package_toolbox(version='X.Y.Z')
    ```
-5. Test.
-6. Commit the latest changes locally using Git (you don't need to mention the new vX.Y.Z number - this should be in the commit tag - see below).
-7. [Optional] Tag the relevant commit using the new vX.Y.Z number (if this has changed)
-8. Copy the `Hapigym.mltbx' file to the 'Hapigym_docs' repo
-
-## Making changes to 'Hackable Model Files'
-
-The specific process for this is more involved than for changing 'Source Classdefs', this is covered in the next section.
+3. Test.
+4. Commit the latest changes locally using Git (you don't need to mention the new vX.Y.Z number - this should be in the commit tag - see below).
+5. [Optional] Tag the relevant commit using the new vX.Y.Z number (if this has changed).
+6. Push your local changes to GitHub.
+7. Copy the `Hapigym.mltbx' file to the 'Hapigym_docs' repo (commit and push on that *public* repo).
+8. [Optional] Consider adding release notes to describe the changes since the previous GitHub Release (do this on GitHub online). It is not essential to make a new Release for every new Tag (although this can be done if helpful). When writing release notes, it is especially help to cross-reference all of the GitHub Issues that were closed since the previous Release.
 
 [Next page (Update SLXs using a prototype)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Update-SLXs-using-a-prototype.md)
