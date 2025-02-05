@@ -52,7 +52,12 @@ An important way to think about this difference is to consider the end-user's sy
 
 1. Open the relevant `.m` file from the root of your development folder (e.g. `Hapigym.m`, `PTO.m` etc.). This must be the folder that you cloned directly from GitHub, and should also contain the `.git` folder and `.gitignore` file.
 2. Make your new changes directly to this file.
-3. Make a decision on your version number. If you have made no changes to the code that changes the behaviour (e.g. change/add code comments, change the name of an internal variable etc.), you can consider keeping the same version as previous. Otherwise, you can increment the third value ('Z') to the next number if the change, the second value ('Y') if you have reached a significant new version, and the first value ('X') if a major overhaul/landmark has been implemented. Version 'v1.0.0 should be reserved for a post beta-testing.
+3. Make a decision on your version number. If you have made no changes to the code that changes the behaviour (e.g. changes/addition of code comments, changes to the names of internal variables etc.), you can consider keeping the same version as previous. Otherwise, you can increment:
+   - the third value ('Z') to the next number if the change is minor (e.g. a bug fix)
+   - the second value ('Y') if you have reached a significant new version, and/or 
+   - the first value ('X') if a major overhaul/landmark has been implemented. 
+
+   Version 'v1.0.0' should be reserved for the first major release a post beta-testing/pre-release. See https://semver.org/ for more details on 'Semantic Versioning'.
 4. Generate a new Toolbox file using the following command (swapping X,Y,Z for your version numbers):
    ```
    Hapigym.package_toolbox(version=''X.Y.Z'')
