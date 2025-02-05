@@ -13,8 +13,8 @@ Below is a summary of the updating process for the Toolbox. You may find that yo
 
 ```mermaid
 flowchart TB
-    A{Which parts<br>are being<br>updated?} -- Source<br>Classdefs<sup>†</sup> --> B[Make changes to '.m' within your locally cloned Git folder, **not 'Roaming'**];
-    A -- Hackable<br>Model Files<sup>†</sup> --> C[Navigate to 'prototypes' folder and build a new prototype];
+    A{Which parts<br>are being<br>updated?} -- Source<br>Classdefs --> B[Make changes to '.m' within your locally cloned Git folder, **not 'Roaming'**];
+    A -- Hackable<br>Model Files --> C[Navigate to 'prototypes' folder and build a new prototype];
     C --> D[Make changes to '.slx' within your prototype,<br>**not source**];
     D --> E["Migrate your new code to source using: 'rebuild_from_prototype(folder=''your_prototype'')', the optional 'version' argument can be added"];
     B --> F["Package new '.mltbx' using: Hapigym.package_toolbox(version=''X.Y.Z'') swapping X,Y,Z for your version numbers"];
@@ -33,7 +33,6 @@ style H fill:#55efc4
 
 
 
-> † &ensp;See below for descriptions of *'Source Classdefs'* and *'Hackable Model Files'* <br>
 > ‡ &ensp;You may also want to check other settings within this view if you experience further issues
 
 ## Understanding two key parts to the source code
@@ -60,7 +59,7 @@ An important way to think about this difference is to consider the end-user's sy
    Version 'v1.0.0' should be reserved for the first major release a post beta-testing/pre-release. See https://semver.org/ for more details on 'Semantic Versioning'.
 4. Generate a new Toolbox file using the following command (swapping X,Y,Z for your version numbers):
    ```
-   Hapigym.package_toolbox(version=''X.Y.Z'')
+   Hapigym.package_toolbox(version='X.Y.Z')
    ```
 5. Test.
 6. Commit the latest changes locally using Git (you don't need to mention the new vX.Y.Z number - this should be in the commit tag - see below).
