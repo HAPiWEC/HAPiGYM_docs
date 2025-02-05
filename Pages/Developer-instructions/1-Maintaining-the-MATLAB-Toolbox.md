@@ -63,16 +63,16 @@ The specific process for this is more involved than for changing 'Source Classde
    - the second value ('Y') if you have reached a significant new version, and/or 
    - the first value ('X') if a major overhaul/landmark has been implemented. 
 
-   Version 'v1.0.0' should be reserved for the first major release a post beta-testing/pre-release. See https://semver.org/ for more details on 'Semantic Versioning'.
+   Version 'v1.0.0' should be reserved for the first major release post beta-testing/pre-release. When the software is still under development, the version should be of the form 'v0.Y.Z'. See https://semver.org/ for more details on 'Semantic Versioning'.
 2. Generate a new Toolbox file using the following command (swapping X,Y,Z for your version numbers):
    ```
    Hapigym.package_toolbox(version='X.Y.Z')
    ```
 3. Test.
-4. Commit the latest changes locally using Git (you don't need to mention the new vX.Y.Z number - this should be in the commit tag - see below).
-5. [Optional] Tag the relevant commit using the new vX.Y.Z number (if this has changed).
+4. Commit the latest changes locally using Git (to avoid confusion, you should avoid mentioning the new vX.Y.Z number in the commit message - this should be defined using a Git Tag - see below).
+5. [Optional] Tag the relevant commit using the new vX.Y.Z number (if this has changed). An easy way to do this is in GitHub Desktop - right click on your commit under the 'History' tab, click 'Create Tag' (this can also be done in GitHub Online).
 6. Push your local changes to GitHub.
 7. Copy the `Hapigym.mltbx' file to the 'Hapigym_docs' repo (commit and push on that *public* repo).
-8. [Optional] Consider adding release notes to describe the changes since the previous GitHub Release (do this on GitHub online). It is not essential to make a new Release for every new Tag (although this can be done if helpful). When writing release notes, it is especially help to cross-reference all of the GitHub Issues that were closed since the previous Release.
+8. [Optional] Consider adding release notes to describe the changes since the previous Git Release (do this on GitHub Online). It is not essential to make a new Release for every new Tag (although this can be done if helpful). When writing release notes, it is especially help to cross-reference all of the GitHub Issues that were closed since the previous Release.
 
 [Next page (Update SLXs using a prototype)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Developer-instructions/2-Update-SLXs-using-a-prototype.md)
