@@ -26,7 +26,7 @@ Variant.Control = 1
 - **Generate variant control expressions:** (towards the end of `Init_Sandbox.m') Eventually this will be hidden in the toolbox.
 - **Subfolder structure and names:** Referenced library blocks will no longer be reachable. 
 - **Code in the toolbox:** Horrible horrible things will happen.
-- 
+
 
 
 ## Things you'll be able to change in the future in the future 
