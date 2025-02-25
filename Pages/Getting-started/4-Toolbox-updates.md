@@ -39,4 +39,4 @@ If you are working on adaptations to certain upgradable files, you can force the
 
 [Previous page (Using the Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md)
 
-[Next page (Making your own controller)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/4-Making-your-own-controller.md)
+[Next page (Making your own controller)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/5-Making-your-own-controller.md)
