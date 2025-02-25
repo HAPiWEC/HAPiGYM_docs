@@ -1,8 +1,8 @@
 [Back to documentation home-page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/README.md)
 
-# Using the Sandbox
+# Using the PiL
 
-**Health Warning!** The sandbox is currently being developed, so there will be frequent updates to the toolbox.
+**Health Warning!** The Processor-in-the-Loop is currently being developed, so there will be frequent updates to the toolbox.
 
 ## Overall structure and approach
 - **A Raspberry Pi Simulation:** the sandbox is a simulation of code running on a Raspberry Pi. When you are ready to test your code on a Raspberry Pi, you'll be running a simulation called `Pil.slx`. But the first step is to demonstrate that your code is suitable for running on the Pi, and that is what the Sandbox is for. This is important because many of the standard Simulink blocks are continous and won't run on a Pi.
