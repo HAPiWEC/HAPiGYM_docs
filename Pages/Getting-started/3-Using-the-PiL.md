@@ -2,6 +2,7 @@
 
 # Using the Sandbox
 
+**Health Warning!** The sandbox is currently being developed, so there will be frequent updates to the toolbox.
 
 ## Overall structure and approach
 - **A Raspberry Pi Simulation:** the sandbox is a simulation of code running on a Raspberry Pi. When you are ready to test your code on a Raspberry Pi, you'll be running a simulation called `Pil.slx`. But the first step is to demonstrate that your code is suitable for running on the Pi, and that is what the Sandbox is for. This is important because many of the standard Simulink blocks are continous and won't run on a Pi.
@@ -40,6 +41,6 @@ Variant.Control = 1
 
 
 
-[Previous page (Quick Start)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/1-Quick-start.md)
+[Previous page (Using the Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md)
 
 [Next page (Toolbox Updates)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/4-Toolbox-updates.md)
