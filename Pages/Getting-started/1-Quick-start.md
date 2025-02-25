@@ -39,7 +39,7 @@ The top-level `Hapigym` class contains some key methods required by general user
 
 There are a series of additional methods intended for developers. Note that this main *classdef* is referred to as `Hapigym`, whereas the *toolbox* is referred to as `HAPiGYM`. 
 
-The following Matlab classes are also provided within the toolbox: `PTO`, `Digital_hardware`, `Hydro_model`, `Waves`. Users can inspect/run the main entry-point script `Initialisation.m`, to see how and where these classes are used. Help can be found for each class and method using the usual Matlab approach (e.g. `help Hydro_model`).
+The following Matlab classes are also provided within the toolbox: `PTO`, `Digital_hardware`, `Hydro_model`, `Waves`. Users can inspect/run the main entry-point script `Init_Sandbox.m`, to see how and where these classes are used. Help can be found for each class and method using the usual Matlab approach (e.g. `help Hydro_model`).
 
 
 ### Build
@@ -49,10 +49,10 @@ You'll still have well-defined areas that you can build your own code and Simuli
 You will notice an additional file called `meta.mat` is generated during the build process, along with a number of (nested) folders named `Previous_versions` containing time/version-stamped copies of most files. These are created to support the **upgrade process**, which is described in the [Toolbox Updates page](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md).
 
 ### Initialisation
-When you run the `Sandbox.slx` simulation, the first thing that happens is that the `Initialisation.m` file is run. This is buried away in Simulink under `Modelling>Model Settings> Model Properties>Callbacks>PreloadFcn`. Simulink looks for this file in the current folder, so it is important that you are in the current folder when running the simulation. The Initialisation routine lets the user choose settings for that run. These are implemented by creating variables in the workspace which are referenced by the simulation. Some of these workspace variables are objects which are created by calling methods that are defined in the toolbox. `Initialisation.m` is populated with defaults so you can use it straight out-of-the-box. 
+When you run the `Sandbox.slx` simulation, the first thing that happens is that the `Init_Sandbox.m` file is run. This is buried away in Simulink under `Modelling>Model Settings> Model Properties>Callbacks>PreloadFcn`. Simulink looks for this file in the current folder, so it is important that you are in the current folder when running the simulation. The Initialisation routine lets the user choose settings for that run. These are implemented by creating variables in the workspace which are referenced by the simulation. Some of these workspace variables are objects which are created by calling methods that are defined in the toolbox. `Init_Sandbox.m` is populated with defaults so you can use it straight out-of-the-box. 
 
 ### Simulation
-After `Initialisation.m` has run, the simulation is built. If additional toolboxes are required, these will be specified in the `Diagnostic Viewer` at the bottom of the Simulink pane. If all is well with the build, the simulation is then run. This is faster than real time, so you might miss it! You can make sure it has actually run using `Data Inspector`, which is available on the Simulation tab in Simulink.       
+After `Init_Sandbox.m` has run, the simulation is built. If additional toolboxes are required, these will be specified in the `Diagnostic Viewer` at the bottom of the Simulink pane. If all is well with the build, the simulation is then run. This is faster than real time, so you might miss it! You can make sure it has actually run using `Data Inspector`, which is available on the Simulation tab in Simulink.       
 
 
 [Next page (Using The Sandbox)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md)
