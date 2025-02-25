@@ -2,39 +2,43 @@
 
 # Using the PiL
 
-**Health Warning!** The Processor-in-the-Loop is currently being developed, so there will be frequent updates to the toolbox.
+**Health Warning!** The Processor-in-the-Loop (PiL) is currently being developed, so there will be frequent updates to the toolbox.
 
 ## Overall structure and approach
-- **A Raspberry Pi Simulation:** the sandbox is a simulation of code running on a Raspberry Pi. When you are ready to test your code on a Raspberry Pi, you'll be running a simulation called `Pil.slx`. But the first step is to demonstrate that your code is suitable for running on the Pi, and that is what the Sandbox is for. This is important because many of the standard Simulink blocks are continous and won't run on a Pi.
-- **Discretisation:** You'll need to replace continuous blocks with their discrete equivalents. To see how this looks for a hydrodynamic model, click on `RigSim>OceanEd_linear`. You'll see that the integrators and the state space model (for the radiation memory) are discrete versions. We had started with a continous model and we discretised it using the [command line](https://uk.mathworks.com/help/simulink/slref/sldiscmdl.html). More information is available [online](https://uk.mathworks.com/help/control/ug/continuous-discrete-conversion-methods.html)       
-- **Project usage:** We have assumed that users will make changes to their controllers or to the settings in the initialisation then compare the outcomes of various runs. We anticipate that typically users will only create a new project if there are major changes in their code or in the toolbox structure. (Currently you need admin rights to delete some of the folders created by the hapigym build - we are working on this) However, if there's a major structural change due to a toolbox update, it is possible to revert to an older version of a toolbox [available here](https://github.com/HAPiWEC/HAPiGYM_docs/tree/main/Toolbox_versions/Earlier%20versions). It may be necessary to have a range of project folders to deal with teething problems. 
-- **Variant subsystems:** We are using Simulink's variant subsystems to allow users to make subsystem choices. This has an advantage over a switch in that only the chosen variant is compiled. It also makes it easier for different variants to have differently sized inputs and outputs. You can choose which variant to use in the inialisation routine.
-- **Library blocks:** Many common components, including the variant subsystems, and your own controller, are now custom Simulink library blocks. Library blocks are a convenient way of making sure that updates are rolled out across muliple simulations, e.g. both the Sandbox and PiL. And unlike referenced models, they are compatible with running on the Pi. These blocks are separate slx files which are stored in the subfolders within `Simulation_components`. They are not yet available from the Library Browser. To insert them in your model, open the library block, copy the contents to the clipboard, and paste into your model. 
-- **Modularity:** This use of library blocks and variant subsystems results in a modular approach. It is hoped that this will make the frequent updates less painful for users. 
+- **Like the Sandbox, but for real:** The `Pil.slx` simulation extends the capability of the Sandbox with features that allow it to run on a Raspberry Pi. All the tips for running the Sandbox also apply to the PiL. 
+
+- **A virtual tank test:** The PiL has been designed to give you the experience of running a controller remotely in the wave tank. The PiL is the Sandbox with the following additional features:
+a configuration parameter set for running on a Raspberry Pi, communications with an Internet-of-Things client (Flespi) to give quasi-real-time interactions with a GUI, power calculations, and a state machine.    
+- **Runs:** Just as in a wave tank, the desired wave elevation is synthesised using a DFT, so it is a repeating time series. A 'run' counts as a complete loop through the repeating cycle of waves. The outcome of a run is the average power.       
+- **Options for running on a Pi:** The PiL tools can be run on your own Pi. You can also sign up to have time on one of our Raspberry Pis and run this remotely using MATLAB online. 
+- **Simulation options:** The PiL can still be run as a Simulation, and there are two options for this: each run can be timed to start at the exact point in the wave sequence, or they can start at different points in the sequence. The first option results in high repeatability, useful for making tweaks to a controller. The second option results in worse repeatability, and this is useful for learning how to adapt to the variability inherent in tank testing. When running on the PiL or in the tank, the natural workflow is to manually start the run using a push button. This would result in a different starting point in the wave sequence. It is useful to have simulations to replicate this.   
+
+## State machine:
+The PiL's state machine steps through a sequence of steps that are similar to what would be experienced in the wave tank. The duration of each state can be set in `Init_PiL.m`.
+
+- **SimSetUp:**  The first state gives the hydrodynamic simulation some time to settle. In a wave tank this is analogous to the time the waves take to reach and activate the buoy. For the linear model, this should be at least 20 s. The non-linear models need longer set up times.
+- **Ready2Control:** A waiting state. In the wave tank this allows the user to  check whether conditions are right for them before pressing the start button. Alternatively, starting could be automated as soon as this state is reached.
+- **ControlRamp:** A ramp from 0 to 1 is multiplied by the demand control force (`F_pto`). We recommend that this is at least ten times longer than the wave period to avoid an offset. 
+- **ControlSetUp:** A user-specified time, where the `F_pto` is applied to the hydrodynamic simulation, but the power doesn't contribute to the measurement of average power. This could be useful for bespoke control set up, e.g. allowing a filter to settle.
+- **Run:** The period of time used for measurement of the average power. This should always be the repeat time of the DFT. 
+- **RampDown:** To prevent a sudden release of PTO force, this should be ramped down. The duration is user-specified; we do not believe that it is critical for this to be too long. 
+
+
 
 ## Things you're encouraged to change
-(Look out for the comment ` % changeable` after each line of code)
-- **waves:** In the inialisation routine, you can choose the types of waves. We hope to add to the limited options we are currently offering.
-- **PTO SIMULATION SETTINGS:** Currently this selects the variant of PTO efficiency matrix used to calculate electrical power. We will soon add more detailed PTO models as options here, as well as different power ratings. This can be changed by setting the value of `ptoEff_variant` in the PROJECT SETTINGS.
-- **CONTROLLER SETTINGS:** This allows users to select the variant of controller used. There is a choice of three dummy controllers offered currently. We will very soon be offering some more interesting options. This can be changed by setting the value of `control_variant` in the PROJECT SETTINGS.
-- **POWER CHAIN SETTINGS:** The motor we are using to simulate a generator has an instantaneous torque limit of 49 Nm and a continuous torque limit of 13 Nm. You are welcome to explore how the torque limit impacts your controller, but be aware that you will not have control of this limit during tank testing. You might also be interested in how simulated sensor noise impacts your controller.
-- **MyControlPolicy:** If we choose the default ```matlab
-Variant.Control = 1
-``` then we have selected `Simulation_components\Control\MyControlPolicy.slx`. This is the custom library block that users are encouraged to drop their controllers into. If you have different input requirements please let us know. We recommend opening the existing library block, unlocking it, deleting the contents, and pasting in your controller. Once this is saved, the MyController library block in the simulation will update. 
+(All the points mentioned in the Sandbox hold - only variables specific to the PiL are mentioned here)
+- **DurationFor:** These are the lengths of time of each of the states. They can be very useful for testing how they impact repeatability.
+- **SIMULATION SETTINGS:** The value of `Simulated` controls a switch that sets the `ControlEnabled` variable. The ControlEnabled switch from the GUI is enabled by setting `Simulated = 0`. The non-repeatable runs are chosen using  `Simulated = 1`. The repeatable runs are chosen using  `Simulated = 2`. You can also specify the number of runs done in the simulation (`NumRuns`). When `PiL.slx` is deployed to a Pi then it runs until the GUI stop button is pressed. 
+
 
 ## Things you're discouraged from changing
-- **Generate variant control expressions:** (towards the end of `Init_Sandbox.m') Eventually this will be hidden in the toolbox.
-- **Subfolder structure and names:** Referenced library blocks will no longer be reachable. 
-- **Code in the toolbox:** Horrible horrible things will happen.
+- **Rasberry Pi settings:** (towards the end of `Init_Sandbox.m') Eventually this will be hidden in the toolbox.
+- **The name of the simulation `PiL.slx`:** This will break one of the GUI blocks.
+ - **Any code not marked `changeable':** Get in touch with us if you'd like something to be more tweakable.
 
 
 
-## Things you'll be able to change in the future in the future 
-- **HYDRO MODEL SETTINGS:** We are working on a non-linear version and a 6 DoF version. Also the good people at NREL are working on a WECSim version. At the moment there is just one option available: a 1 DoF linear model. This is specified as `hydro_model         = "COERbuoy_1DoF_linear_rad400""` in the PROJECT SETTINGS.
-- **PROJECT SETTINGS:** There are several parameters in the PROJECT SETTINGS that we will allow users to change in the future, such as `dt`, but this will require testing and documentation first.
-- **Raspberry Pi settings:** relevant when things start running on the Pi.
--  **POWER CHAIN SETTINGS:** The parameter `r` is the radius of the shaft that the buoy tether is wound around. For the moment the noise settings are unrealistically dependant on this, so you are currently discouraged from changing this.
-- **Variant subsystems:** Perhaps you'd like something we aren't offering? We can add more dummy files if that's useful. If you have anything you are willing to share, we would consider including this as an option. 
+
 
  
 
