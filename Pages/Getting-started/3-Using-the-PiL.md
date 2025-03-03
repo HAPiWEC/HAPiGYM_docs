@@ -29,9 +29,16 @@ The PiL's state machine steps through a sequence of steps that are similar to wh
 (All the points mentioned in the Sandbox hold - only variables specific to the PiL are mentioned here)
 - **DurationFor:** These are the lengths of time of each of the states. They can be very useful for testing how they impact repeatability.
 - **SIMULATION SETTINGS:** The value of `Simulated` controls a switch that sets the `ControlEnabled` variable. The ControlEnabled switch from the GUI is enabled by setting `Simulated = 0`. The non-repeatable runs are chosen using  `Simulated = 1`. The repeatable runs are chosen using  `Simulated = 2`. You can also specify the number of runs done in the simulation (`NumRuns`). When `PiL.slx` is deployed to a Pi then it runs until the GUI stop button is pressed. 
+- **PiL.slx>GUI>Hapi_display:** As long as there is a mux going into this block with up to 16 signals, Hapi_display is happy. You can update the signal names in the GUI. These name changes can be saved and reloaded using 'User Data' (top left of the GUI).
+- **PiL.slx>GUI>Hapi_probes:** You may have up to eight of these.
+- **PiL.slx>GUI>From GUI>Inputs:** You may have up to eight of these. The first of these is currently sent to the controller as a default.
+
 
 
 ## Things you're discouraged from changing
+- **PiL.slx>GUI>Hapi_status:** Signals are connected to progress indicators.
+- **PiL.slx>GUI>EnableControl:** Signal used in State Machine.
+- **PiL.slx>GUI>Simulation Control:** No modifications needed for the user selection and big red stop button. 
 - **Rasberry Pi settings:** (towards the end of `Init_Sandbox.m') Eventually this will be hidden in the toolbox.
 - **The name of the simulation `PiL.slx`:** This will break one of the GUI blocks.
  - **Any code not marked `changeable':** Get in touch with us if you'd like something to be more tweakable.
