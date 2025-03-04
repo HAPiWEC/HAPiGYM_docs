@@ -11,7 +11,8 @@ If you have questions relating to this suite of software tools, please email us 
 
 1. [Quick start](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/1-Quick-start.md)
 2. [Using the Sandbox](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md)
-3. [Toolbox Updates](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md)
+3.  [Using the PiL](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Using-the-PiL.md)
+4.  [Toolbox Updates](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Toolbox-updates.md)
 4. [Making your own controller](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/4-Making-your-own-controller.md)
 
 
