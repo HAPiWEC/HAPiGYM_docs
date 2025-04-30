@@ -2,7 +2,9 @@
 
 # Using the PiL
 
-**Health Warning!** The Processor-in-the-Loop (PiL) is currently being developed, so there will be frequent updates to the toolbox.
+> :warning: **Health Warning!** The Processor-in-the-Loop (PiL) is currently being developed, so there will be frequent updates to the toolbox.
+
+> **Installtion Note:** To run PiL, you will need to have both the [MATLAB and Simulink Support Packages for Raspberry Pi Hardware](https://uk.mathworks.com/hardware-support/raspberry-pi.html). You can do this through the Home tab on MATLAB, then choosing 'Get Add-Ons'.
 
 ## Overall structure and approach
 - **Like the Sandbox, but for real:** The `Pil.slx` simulation extends the capability of the Sandbox with features that allow it to run on a Raspberry Pi. All the tips for running the Sandbox also apply to the PiL. 
