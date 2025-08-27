@@ -6,3 +6,4 @@ More here soon! First we need to hear from you what you need so that you can get
 
 [Previous page (Toolbox Updates)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/4-Toolbox-updates.md)
 [Next page (Using the Tank)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/6-Using-the-Tank.md)
+[Next page (Using the Tank)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/6-Using-the-Tank.md)
