@@ -40,5 +40,13 @@ The Tank's state machine is more detailed than the PiL's, reflecting real-world 
 - **The name of the simulation `Tank.slx`:** This will break the configuration and GUI blocks designed to work with this specific model name.
 - **Any code not marked `changeable`:** Get in touch with us if you'd like something to be more tweakable.
 
+## Workflow for a Tank Test
+
+- **Develop** your controller in the `Sandbox.slx`.
+- **Test** its behaviour on a Raspberry Pi using `PiL.slx` in deployed mode.
+- **Verify** the full run procedure and timing using `Tank.slx` with `experiment_variant = 1` (Rig_Sim).
+- **(Optional)** Perform emulator testing with `Tank.slx` using `experiment_variant = 3` (WaveEmulator1) on the Bobblehead lab bench setup.
+- For a **real tank test**, a trained operator will run `Tank.slx` with `experiment_variant = 2` (OSPREY_II). You will then use your GUI to enable control and start your run when instructed.
+
 
 [Previous page (Making your own controller)](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/5-Making-your-own-controller.md)
