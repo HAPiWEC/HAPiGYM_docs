@@ -4,7 +4,7 @@
 
 > :warning: **Health Warning!** The Tank simulation (`Tank.slx`) is the most complex and closest-to-reality option, designed for controlling physical hardware. It is under active development and interfaces with live systems; use it with extreme caution.
 
-> **Prerequisite:** Before using the Tank, you should be completely familiar with the [Sandbox](/#using-the-sandbox) and [PiL](/#using-the-pil). The Tank model builds directly upon these.
+> **Prerequisite:** Before using the Tank, you should be completely familiar with the [Sandbox](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/2-Using-the-Sandbox.md) and [PiL](https://github.com/HAPiWEC/HAPiGYM_docs/blob/main/Pages/Getting-started/3-Using-the-PiL.md). The Tank model builds directly upon these.
 
 ## Overall structure and approach
 - **Like the PiL, but for hardware:** The `Tank.slx` simulation extends the PiL with the critical hardware interfaces and safety protocols required for operating the physical OSPREY rig in the wave tank or the Bobblehead emulator on a lab bench.
