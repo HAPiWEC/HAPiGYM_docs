@@ -16,8 +16,8 @@
 ## State machine:
 The Tank's state machine is more detailed than the PiL's, reflecting real-world operational and safety procedures. The duration of each state can be set in `Init_Tank.m`.
 
-- **TankRampUp:** The tank operator applies a pre-load force to the system to establish a safe starting position.
-- **Ready2Control / TankManualControl:** Waiting states where the Tank Operator has control, managing the handover to the user.
+- **TankManualControl:** The tank operator applies a pre-load force to the system to establish a safe starting position.
+- **Ready2Control:** Waiting states where the Tank Operator has control, managing the handover to the user.
 - **ControlSetUp:** The user's controller is enabled and given time to initialize (e.g., for filter states to settle before the main run).
 - **Wait4ZeroPos:** The system waits for the WEC to pass through the equilibrium (zero) position before applying the full control force. This prevents a damaging "jerk" on the hardware.
 - **Run:** The main data collection period where the user's controller is active and power is calculated.
