@@ -21,7 +21,6 @@ The Tank's state machine is more detailed than the PiL's, reflecting real-world 
 - **ControlSetUp:** The user's controller is enabled and given time to initialize (e.g., for filter states to settle before the main run).
 - **Run:** The main data collection period where the user's controller is active and power is calculated.
 - **RampDown:** The control force is smoothly ramped down to zero to avoid sudden force transitions on the hardware.
-- **RunDone:** The run is complete. Control is returned to the Tank Operator.
 
 ## Things you're encouraged to change
 (All the points mentioned in the Sandbox and PiL hold - only variables specific to the Tank are mentioned here)
