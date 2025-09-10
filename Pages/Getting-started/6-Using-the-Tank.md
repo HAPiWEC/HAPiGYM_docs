@@ -24,10 +24,12 @@ The Tank's state machine is more detailed than the PiL's, reflecting real-world 
 
 ## Things you're encouraged to change
 (All the points mentioned in the Sandbox and PiL hold - only variables specific to the Tank are mentioned here)
+- **`PTO_variant`:**
+- **`PTO_settings`:**
+- **`Controller`:**
+- **`GUI SETTINGS`:** The `GUI_variant` determines how you interact with the system. `1` for simulating button presses, `2` for operation on Pi via Flespi(Dual GUIs), `3` for running on OSPREY.
 - **`EXPERIMENT SETTINGS`:** The `experiment_variant` is the most critical setting. Choose `1` for Simulation/Rig Testing, `2` for the Real Wave Tank.
-- **`GUI SETTINGS`:** The `GUI_variant` determines how you interact with the system. `1` for automated testing, `2` for remote operation via FlesPi/Dual GUI, `3` for local control via a Simulink Dashboard.
 - **`TIMING SETTINGS`:** The `DurationFor` each state (e.g., `Wait4ZeroPos`, `ControllerSetUp`) in `Init_Tank.m` are critical for safe and effective operation and can be tuned.
-- **`StartRunWhenCentered`:** Setting this to `1` can help protect the hardware by ensuring the controller engages only at the zero-crossing point.
 
 ## Things you're discouraged from changing
 - **The State Machine Logic and Transitions:** The sequence of states is designed for hardware safety. Do not modify the logic or order of states within the Simulink model.
