@@ -43,7 +43,6 @@ The Tank's state machine is more detailed than the PiL's, reflecting real-world 
 - **Develop** your controller in the `Sandbox.slx`.
 - **Test** its behaviour on a Raspberry Pi using `PiL.slx` in deployed mode.
 - **Verify** the full run procedure and timing using `Tank.slx` with `experiment_variant = 1` (Rig_Sim).
-- **(Optional)** Perform emulator testing with `Tank.slx` using `experiment_variant = 3` (WaveEmulator1) on the Bobblehead lab bench setup.
 - For a **real tank test**, a trained operator will run `Tank.slx` with `experiment_variant = 2` (OSPREY_II). You will then use your GUI to enable control and start your run when instructed.
 
 
